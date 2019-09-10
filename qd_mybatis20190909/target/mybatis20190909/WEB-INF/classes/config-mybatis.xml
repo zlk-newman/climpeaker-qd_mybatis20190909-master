@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置mybatis的环境参数-->
+    <environments default="development">
+        <environment id="development">
+            <!--事务管理器对象是JDBC-->
+            <transactionManager type="JDBC"/>
+            <!--数据源的的配置：pooled、dhc2、c3p0、drouid等等-->
+            <dataSource type="POOLED">
+                <!--配置数据源的：驱动类名、连接串、用户名、密码-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis2019?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=Hongkong"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--配置mapper映射文件-->
+    <mappers>
+        <mapper resource="com/yuw/mapper/UserInfoBeanMapper.xml"/>
+    </mappers>
+</configuration>
