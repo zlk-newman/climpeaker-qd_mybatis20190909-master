@@ -22,7 +22,7 @@
         <!--mysql数据库驱动包：注意8和5不一样-->
         <mysql-db-driver>8.0.17</mysql-db-driver>
         <!--junit-->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencies>
